@@ -1,35 +1,68 @@
 import { NavLink } from "react-router-dom";
 
+import Container from "../../ui/Container/Container";
+import Button from "../../ui/Button/Button";
+
+import wordmark from "../../../assets/logo/ScrapTogetherWordMark.png";
+import logo from "../../../assets/logo/ScrapTogether.png";
+
+import styles from "./Navbar.module.css";
+
 export default function Navbar() {
-    return (
-        <nav>
-            <h2>ScrapTogether</h2>
+  return (
+    <header className={styles.navbar}>
+      <Container>
+        <nav className={styles.nav}>
+          <div className={styles.brand}>
+            <img src={logo} alt="ScrapTogether" />
+            <img src={wordmark} alt="ScrapTogether" />
+          </div>
 
-            <ul>
-                <li>
-                    <NavLink to="/">Home</NavLink>
-                </li>
+          <div className={styles.links}>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `${styles.link} ${isActive ? styles.active : ""}`
+              }
+            >
+              Home
+            </NavLink>
 
-                <li>
-                    <NavLink to="/find-players">
-                        Find Players
-                    </NavLink>
-                </li>
+            <NavLink
+              to="/find-players"
+              className={({ isActive }) =>
+                `${styles.link} ${isActive ? styles.active : ""}`
+              }
+            >
+              Find Players
+            </NavLink>
 
-                <li>
-                    <NavLink to="/party-browser">
-                        Party Browser
-                    </NavLink>
-                </li>
+            <NavLink
+              to="/party-browser"
+              className={({ isActive }) =>
+                `${styles.link} ${isActive ? styles.active : ""}`
+              }
+            >
+              Crews
+            </NavLink>
 
-                <li>
-                    <NavLink to="/community">
-                        Community
-                    </NavLink>
-                </li>
-            </ul>
+            <NavLink
+              to="/community"
+              className={({ isActive }) =>
+                `${styles.link} ${isActive ? styles.active : ""}`
+              }
+            >
+              Community
+            </NavLink>
+          </div>
 
-            <button>Login</button>
+          <div className={styles.actions}>
+            <Button>Join Discord</Button>
+
+            <Button variant="secondary">Login</Button>
+          </div>
         </nav>
-    );
+      </Container>
+    </header>
+  );
 }

@@ -1,0 +1,68 @@
+:root {
+
+    /* Colors */
+
+    --color-background: #1b1b1b;
+
+    --color-surface: #292929;
+
+    --color-surface-light: #343434;
+
+
+    --color-primary: #f4b321;
+
+    --color-primary-hover: #ffc84a;
+
+
+    --color-text: #ffffff;
+
+    --color-text-secondary: #b8b8b8;
+
+
+    --color-border: #4a4a4a;
+
+
+
+    /* Layout */
+
+    --max-width: 1400px;
+
+    --navbar-height: 72px;
+
+
+
+    /* Radius */
+
+    --radius-sm: 8px;
+
+    --radius-md: 12px;
+
+    --radius-lg: 18px;
+
+
+
+    /* Spacing */
+
+    --space-1: 4px;
+
+    --space-2: 8px;
+
+    --space-3: 12px;
+
+    --space-4: 16px;
+
+    --space-5: 24px;
+
+    --space-6: 32px;
+
+    --space-7: 48px;
+
+    --space-8: 64px;
+
+
+
+    /* Shadow */
+
+    --shadow-md: 0 6px 20px rgba(0,0,0,.25);
+
+}
